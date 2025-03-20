@@ -1,0 +1,132 @@
+/* Defining root variables */
+:root{
+    --primary-color: #0f0f0f;
+    --secondary-color: #282828;
+    --tertiary-color: #ff0000;
+    --font-color-white: #ffffff;
+    --font-color-gray: #95918e;
+}
+
+/* Defining global styles */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    position: relative;
+    background-color: var(--primary-color);
+    color: var(--font-color-white);
+}
+
+/* Defining styles for HTML elements */
+
+/* Defining styles for search box */
+/* giving position sticky with display flex and z-index for staying at the top when scrolling */
+.search-box{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    max-width: 600px;
+    margin: 10px auto;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: center;
+    height: 60px;
+    background-color: transparent;
+    z-index: 1;
+}
+
+/* Home page button */
+.home-page-btn{
+    width: 15%;
+    padding: 5px;
+    background-color: var(--tertiary-color);
+    border: none;
+    border-radius: 50px 0 0 50px;
+    color: var(--font-color-white);
+    cursor: pointer;
+}
+/* Search field */
+.search-box input{
+    width: 70%;
+    padding: 0 20px;
+    border: 3px solid var(--secondary-color);
+    background-color: var(--primary-color);
+    outline: none;
+    color: var(--font-color-white);
+    font-size: 1.2em;
+}
+/* Search field when focus */
+.search-box input:focus{
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.8);
+}
+/* Search button */
+.search-btn{
+    width: 15%;
+    padding-right: 5px;
+    border: 3px solid var(--secondary-color);
+    border-radius: 0 50px 50px 0;
+    background-color: var(--secondary-color);
+    color: var(--font-color-white);
+    cursor: pointer;
+}
+
+/* Defining styles for video container */
+.video-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+    gap: 20px;
+    padding: 20px;
+    max-width: 1400px; 
+    margin: auto; /* keeping grid centered*/
+}
+
+.video-content{
+    max-width: 550px;
+    margin: 0 auto;
+    border-radius: 15px;
+    transition: transform 0.2s;
+}
+.video-content:hover{
+    box-shadow: 0 0 10px var(--secondary-color);
+    transform: scale(1.05);
+}
+.video-thumbnail img{
+    object-fit: contain; /* Maintain aspect ratio and fill the container */
+    width: 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.video-details{
+    display: flex;
+    gap: 5px;
+    padding: 5px;
+}
+.video-title{
+    margin: 5px 0;
+    color:#fff;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+.channel-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 40px;
+    height: 40px;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+}
+.channel-name, .video-meta-data{
+    color: var(--font-color-gray);
+}
+
+.no-result{
+    text-align: center;
+    font-size: 1.2em;
+    color: var(--font-color-gray);
+}
+
